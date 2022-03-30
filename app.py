@@ -40,16 +40,16 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     r = '不好意思，請依照格式輸入，謝謝!'
-    x = random.randint(20,80)
-    y = x + 20
+    x = str(random.randint(20,80))
+    y = str(random.randint(20,80)+20)
     if '陳立軒' in msg and '1-1' in msg :
         r = '郁達師傅掐指一算，你這次告白一定成功。'
     elif '陳立軒' in msg and '1-2' in msg :
         r = '郁達師傅有言:在您出生當日執行，會有最高機率成功。'    
     elif '1-1' in msg :
-        r = '你有',x,'%的機率會成功，師傅有言：這只是您目前的命運，您依舊能靠你後天努力來提高機率。'
+        r = '你有'+ x +'%的機率會成功，師傅有言：這只是您目前的命運，您依舊能靠你後天努力來提高機率。'
     elif '1-2' in msg :
-        r = '郁達師傅說您最適合在下個重要節慶告白,成功機率有到', y ,'%。'
+        r = '郁達師傅說您最適合在下個重要節慶告白,成功機率有到'+ y +'%。'
     elif '2-0' in msg :
         r = '此需要更多私人資訊，請洽詢師傅ig:@_stanley_09_01'
     elif '3-0' in msg :
